@@ -14,7 +14,7 @@ export interface IPokemonCardProps {
 }
 
 export const PokemonCard: React.FC<IPokemonCardProps> = ({ name, url }) => {
-  const { data, isLoading } = useSWR(url, (url1) => fetchDataByUrl<IPokemonDetailsAPI>(url1));
+  const { data, isLoading } = useSWR(url, (urlForFetch) => fetchDataByUrl<IPokemonDetailsAPI>(urlForFetch));
 
   const cardStyles: SxProps<Theme> = {
     maxWidth: 345,

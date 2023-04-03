@@ -11,17 +11,12 @@ export const PokemonView: React.FC = () => {
   const [isPageLoading, setIsPageLoading] = React.useState(false);
 
   const maxPokemonsOnPage = 12;
-  const loadToCount = page ? maxPokemonsOnPage * page : maxPokemonsOnPage;
+  const loadToCount = maxPokemonsOnPage * page;
   const onPagingChange = (_, newPage: number): void => setPage(newPage);
+  const urlForLoading = `https://pokeapi.co/api/v2/pokemon?limit=${maxPokemonsOnPage}&offset=${loadToCount}`;
 
-  const { data, isLoading, error } = useSWR(
-    `https://pokeapi.co/api/v2/pokemon?limit=${maxPokemonsOnPage}&offset=${loadToCount}`,
-    (url) => fetchDataByUrl<IPokemonsMainDataAPI>(url)
-  );
+  const { data, isLoading, error } = useSWR(urlForLoading, (url) => fetchDataByUrl<IPokemonsMainDataAPI>(url));
 
-  const content = isPageLoading
-    ? new Array(maxPokemonsOnPage).fill('').map(() => <FakePokemonCard />)
-    : data?.results.map((item) => <PokemonCard {...item} key={item.name} />);
   const topContainerStyles: SxProps<Theme> = {
     padding: '40px',
     maxWidth: '1920px',
@@ -30,7 +25,18 @@ export const PokemonView: React.FC = () => {
     minHeight: '820px',
     height: '100%',
   };
+  const topContainerContent = isPageLoading
+    ? new Array(maxPokemonsOnPage).fill('').map(() => <FakePokemonCard />)
+    : data?.results.map((item) => <PokemonCard {...item} key={item.name} />);
+
   const bottomContainerStyles: SxProps<Theme> = { display: 'flex', justifyContent: 'center' };
+  const bottomContainerContent = isPageLoading ? (
+    <Typography variant="h6" align="center">
+      Вызываем покемонов из покеболов...
+    </Typography>
+  ) : (
+    <Pagination page={page} count={getPageCount(data?.count)} onChange={onPagingChange} />
+  );
 
   React.useEffect(() => {
     if (isLoading) {
@@ -44,18 +50,10 @@ export const PokemonView: React.FC = () => {
       {error && <Alert severity="error">Что-то пошло не так...</Alert>}
       <Container maxWidth={false} sx={topContainerStyles}>
         <Grid container spacing={6}>
-          {content}
+          {topContainerContent}
         </Grid>
       </Container>
-      <Container sx={bottomContainerStyles}>
-        {isPageLoading ? (
-          <Typography variant="h6" align="center">
-            Вызываем покемонов из покеболов...
-          </Typography>
-        ) : (
-          <Pagination page={page} count={getPageCount(data?.count)} onChange={onPagingChange} />
-        )}
-      </Container>
+      <Container sx={bottomContainerStyles}>{bottomContainerContent}</Container>
     </Container>
   );
 };

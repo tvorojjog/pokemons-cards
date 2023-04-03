@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3553a5a-dfd7-4670-b376-ee88b2fae2bf" name="Changes" comment="" />
+    <list default="true" id="b3553a5a-dfd7-4670-b376-ee88b2fae2bf" name="Changes" comment="Add &lt;PokemonView /&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonView.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,11 +63,56 @@
       <workItem from="1680103255190" duration="780000" />
       <workItem from="1680104060714" duration="6420000" />
       <workItem from="1680182155250" duration="15188000" />
-      <workItem from="1680268800054" duration="20362000" />
+      <workItem from="1680268800054" duration="21219000" />
+      <workItem from="1680528193243" duration="3592000" />
     </task>
+    <task id="LOCAL-00001" summary="Init project">
+      <created>1680352461605</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680352461605</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add helpers">
+      <created>1680352506395</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680352506395</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add types">
+      <created>1680352514001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680352514001</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add &lt;PokemonCard /&gt;">
+      <created>1680352539982</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680352539982</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add &lt;PokemonView /&gt;">
+      <created>1680352551015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680352551015</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init project" />
+    <MESSAGE value="Add helpers" />
+    <MESSAGE value="Add types" />
+    <MESSAGE value="Add &lt;PokemonCard /&gt;" />
+    <MESSAGE value="Add &lt;PokemonView /&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add &lt;PokemonView /&gt;" />
   </component>
 </project>
