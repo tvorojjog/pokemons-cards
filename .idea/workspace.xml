@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b3553a5a-dfd7-4670-b376-ee88b2fae2bf" name="Changes" comment="Add &lt;PokemonView /&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PokemonView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/pokemonsHelpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/pokemonsHelpers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,8 @@
       <workItem from="1680104060714" duration="6420000" />
       <workItem from="1680182155250" duration="15188000" />
       <workItem from="1680268800054" duration="21219000" />
-      <workItem from="1680528193243" duration="3592000" />
+      <workItem from="1680528193243" duration="4067000" />
+      <workItem from="1680586416630" duration="192000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1680352461605</created>

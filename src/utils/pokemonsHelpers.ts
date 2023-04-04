@@ -9,5 +9,5 @@ export async function fetchDataByUrl<T>(url: string): Promise<T> {
 }
 
 export function getPageCount(count?: number): number | undefined {
-  return count ? Math.floor(count / 12) : undefined;
+  return count ? Math.ceil(count / 12) : undefined;
 }

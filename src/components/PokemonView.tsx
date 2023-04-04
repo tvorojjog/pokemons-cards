@@ -11,7 +11,7 @@ export const PokemonView: React.FC = () => {
   const [isPageLoading, setIsPageLoading] = React.useState(false);
 
   const maxPokemonsOnPage = 12;
-  const loadToCount = maxPokemonsOnPage * page;
+  const loadToCount = maxPokemonsOnPage * (page - 1);
   const onPagingChange = (_, newPage: number): void => setPage(newPage);
   const urlForLoading = `https://pokeapi.co/api/v2/pokemon?limit=${maxPokemonsOnPage}&offset=${loadToCount}`;
 
